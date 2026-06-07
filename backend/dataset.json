@@ -1,0 +1,17 @@
+[
+  {
+    "newsText": "Apple today announced its next generation of iPhone devices featuring advanced generative AI features integrated directly into iOS. Pre-order demand has reached record-breaking highs, causing several Wall Street firms to raise their price targets for AAPL, citing an upcoming robust supercycle.",
+    "watchlist": ["AAPL", "TSLA"],
+    "expected_output": "{\"relevantStocks\":[{\"symbol\":\"AAPL\",\"impact\":\"Positive\"}],\"overallMarketSentiment\":\"Bullish\"}"
+  },
+  {
+    "newsText": "Regulators have launched an official safety probe into Tesla's advanced driver-assistance software following reports of sudden deceleration on highways. Analysts warn that safety reviews could lead to costly mandatory hardware updates and slow down autonomous driving deliveries.",
+    "watchlist": ["TSLA", "NVDA"],
+    "expected_output": "{\"relevantStocks\":[{\"symbol\":\"TSLA\",\"impact\":\"Negative\"}],\"overallMarketSentiment\":\"Bearish\"}"
+  },
+  {
+    "newsText": "Pharmaceutical giant Pfizer announced positive Phase 3 clinical trial results for its new breast cancer treatment, showing a 40% reduction in disease progression risk. Healthcare stocks rallied strongly, boosting the broader market indices.",
+    "watchlist": ["AAPL", "TSLA"],
+    "expected_output": "{\"relevantStocks\":[],\"overallMarketSentiment\":\"Bullish\"}"
+  }
+]

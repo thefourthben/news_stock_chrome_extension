@@ -1,0 +1,493 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Zhanla Stock Analyst</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --bg-dark: #0a0b0e;
+      --panel-bg: rgba(18, 20, 26, 0.75);
+      --border-color: rgba(255, 255, 255, 0.08);
+      --text-primary: #f3f4f6;
+      --text-secondary: #9ca3af;
+      --primary-glow: linear-gradient(135deg, #6366f1 0%, #a855f7 100%);
+      --accent-color: #6366f1;
+      
+      --color-positive: #10b981;
+      --color-negative: #ef4444;
+      --color-neutral: #f59e0b;
+      
+      --glow-positive: rgba(16, 185, 129, 0.15);
+      --glow-negative: rgba(239, 68, 68, 0.15);
+      --glow-neutral: rgba(245, 158, 11, 0.15);
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: 'Plus Jakarta Sans', sans-serif;
+      background-color: var(--bg-dark);
+      color: var(--text-primary);
+      width: 380px;
+      min-height: 520px;
+      overflow-x: hidden;
+      overflow-y: auto;
+      padding: 16px;
+    }
+
+    /* Scrollbar Styling */
+    ::-webkit-scrollbar {
+      width: 6px;
+    }
+    ::-webkit-scrollbar-track {
+      background: rgba(255, 255, 255, 0.02);
+    }
+    ::-webkit-scrollbar-thumb {
+      background: rgba(255, 255, 255, 0.1);
+      border-radius: 4px;
+    }
+    ::-webkit-scrollbar-thumb:hover {
+      background: rgba(255, 255, 255, 0.2);
+    }
+
+    /* Premium Glassmorphic Container */
+    .glass-card {
+      background: var(--panel-bg);
+      backdrop-filter: blur(16px);
+      -webkit-backdrop-filter: blur(16px);
+      border: 1px solid var(--border-color);
+      border-radius: 16px;
+      padding: 18px;
+      box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
+      margin-bottom: 16px;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .glass-card::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 2px;
+      background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.15), transparent);
+    }
+
+    /* Header styling */
+    .header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin-bottom: 14px;
+    }
+
+    .logo-container {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .logo-glow {
+      width: 10px;
+      height: 10px;
+      border-radius: 50%;
+      background: var(--primary-glow);
+      box-shadow: 0 0 12px #6366f1;
+      animation: pulse 2s infinite;
+    }
+
+    h1 {
+      font-family: 'Outfit', sans-serif;
+      font-size: 17px;
+      font-weight: 600;
+      letter-spacing: 0.5px;
+      background: linear-gradient(120deg, #fff 40%, #a855f7 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+
+    .version-tag {
+      font-size: 10px;
+      color: var(--text-secondary);
+      background: rgba(255, 255, 255, 0.05);
+      padding: 2px 6px;
+      border-radius: 6px;
+      border: 1px solid rgba(255, 255, 255, 0.05);
+    }
+
+    /* Watchlist panel */
+    .section-title {
+      font-size: 12px;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      color: var(--text-secondary);
+      margin-bottom: 10px;
+      font-weight: 600;
+    }
+
+    .watchlist-input-container {
+      display: flex;
+      gap: 8px;
+      margin-bottom: 12px;
+    }
+
+    .watchlist-input {
+      flex: 1;
+      background: rgba(255, 255, 255, 0.04);
+      border: 1px solid var(--border-color);
+      border-radius: 8px;
+      padding: 8px 12px;
+      color: var(--text-primary);
+      font-size: 13px;
+      font-family: inherit;
+      outline: none;
+      transition: all 0.2s;
+    }
+
+    .watchlist-input:focus {
+      border-color: var(--accent-color);
+      box-shadow: 0 0 8px rgba(99, 102, 241, 0.2);
+    }
+
+    .btn {
+      background: var(--primary-glow);
+      border: none;
+      border-radius: 8px;
+      color: white;
+      padding: 8px 14px;
+      font-size: 13px;
+      font-weight: 600;
+      cursor: pointer;
+      transition: all 0.2s;
+      outline: none;
+    }
+
+    .btn:hover {
+      opacity: 0.9;
+      transform: translateY(-1px);
+    }
+
+    .watchlist-chips {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 6px;
+      max-height: 80px;
+      overflow-y: auto;
+    }
+
+    .chip {
+      background: rgba(255, 255, 255, 0.06);
+      border: 1px solid rgba(255, 255, 255, 0.05);
+      border-radius: 6px;
+      padding: 4px 8px;
+      font-size: 12px;
+      font-weight: 600;
+      color: var(--text-primary);
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      transition: all 0.2s;
+    }
+
+    .chip:hover {
+      background: rgba(255, 255, 255, 0.1);
+      border-color: rgba(255, 255, 255, 0.1);
+    }
+
+    .chip-remove {
+      color: var(--text-secondary);
+      cursor: pointer;
+      font-size: 11px;
+      font-weight: bold;
+      transition: color 0.2s;
+    }
+
+    .chip-remove:hover {
+      color: var(--color-negative);
+    }
+
+    /* Analysis panel */
+    .analysis-container {
+      min-height: 250px;
+    }
+
+    .empty-state {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      height: 220px;
+      text-align: center;
+      color: var(--text-secondary);
+      gap: 12px;
+    }
+
+    .empty-icon {
+      font-size: 32px;
+      opacity: 0.5;
+    }
+
+    .empty-text {
+      font-size: 13px;
+      line-height: 1.5;
+      padding: 0 20px;
+    }
+
+    /* Loading state */
+    .loading-state {
+      display: none;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      height: 220px;
+      text-align: center;
+      gap: 16px;
+    }
+
+    .spinner {
+      width: 40px;
+      height: 40px;
+      border: 3px solid rgba(99, 102, 241, 0.1);
+      border-top: 3px solid var(--accent-color);
+      border-radius: 50%;
+      animation: spin 1s linear infinite;
+    }
+
+    .loading-text {
+      font-size: 13px;
+      color: var(--text-secondary);
+      animation: pulse 1.5s infinite;
+    }
+
+    /* Results layout */
+    .results-content {
+      display: none;
+    }
+
+    .market-sentiment-box {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 10px 14px;
+      background: rgba(255, 255, 255, 0.03);
+      border: 1px solid var(--border-color);
+      border-radius: 10px;
+      margin-bottom: 14px;
+    }
+
+    .sentiment-badge {
+      font-size: 12px;
+      font-weight: 700;
+      text-transform: uppercase;
+      padding: 4px 10px;
+      border-radius: 6px;
+      letter-spacing: 0.5px;
+    }
+
+    .badge-positive {
+      color: var(--color-positive);
+      background: var(--glow-positive);
+      border: 1px solid rgba(16, 185, 129, 0.3);
+      box-shadow: 0 0 10px var(--glow-positive);
+    }
+
+    .badge-negative {
+      color: var(--color-negative);
+      background: var(--glow-negative);
+      border: 1px solid rgba(239, 68, 68, 0.3);
+      box-shadow: 0 0 10px var(--glow-negative);
+    }
+
+    .badge-neutral {
+      color: var(--color-neutral);
+      background: var(--glow-neutral);
+      border: 1px solid rgba(245, 158, 11, 0.3);
+      box-shadow: 0 0 10px var(--glow-neutral);
+    }
+
+    .news-summary-box {
+      font-size: 12.5px;
+      line-height: 1.55;
+      color: var(--text-secondary);
+      background: rgba(255, 255, 255, 0.02);
+      border-left: 3px solid var(--accent-color);
+      padding: 8px 12px;
+      border-radius: 0 8px 8px 0;
+      margin-bottom: 16px;
+    }
+
+    /* Stock impact details */
+    .stock-impact-list {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+
+    .stock-card {
+      background: rgba(255, 255, 255, 0.02);
+      border: 1px solid var(--border-color);
+      border-radius: 12px;
+      padding: 12px;
+      transition: border-color 0.2s;
+    }
+
+    .stock-card:hover {
+      border-color: rgba(255, 255, 255, 0.15);
+    }
+
+    .stock-card-header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin-bottom: 8px;
+    }
+
+    .stock-symbol-container {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .stock-symbol {
+      font-family: 'Outfit', sans-serif;
+      font-size: 14px;
+      font-weight: 700;
+      color: var(--text-primary);
+    }
+
+    .stock-confidence {
+      font-size: 11px;
+      color: var(--text-secondary);
+    }
+
+    .analysis-block {
+      margin-top: 6px;
+      font-size: 11.5px;
+      line-height: 1.5;
+    }
+
+    .analysis-label {
+      font-weight: 600;
+      color: var(--text-primary);
+      margin-bottom: 2px;
+    }
+
+    .analysis-desc {
+      color: var(--text-secondary);
+      margin-bottom: 8px;
+    }
+
+    .analysis-desc:last-child {
+      margin-bottom: 0;
+    }
+
+    .footer {
+      display: flex;
+      justify-content: center;
+      margin-top: 4px;
+    }
+
+    .analyze-btn {
+      width: 100%;
+      background: rgba(255, 255, 255, 0.05);
+      border: 1px solid var(--border-color);
+      color: var(--text-primary);
+      padding: 10px;
+      border-radius: 10px;
+      font-size: 13px;
+      font-weight: 600;
+      cursor: pointer;
+      transition: all 0.2s;
+    }
+
+    .analyze-btn:hover {
+      background: rgba(255, 255, 255, 0.08);
+      border-color: rgba(255, 255, 255, 0.15);
+    }
+
+    /* Keyframes */
+    @keyframes pulse {
+      0% { opacity: 0.6; box-shadow: 0 0 8px rgba(99, 102, 241, 0.4); }
+      50% { opacity: 1; box-shadow: 0 0 16px rgba(99, 102, 241, 0.8); }
+      100% { opacity: 0.6; box-shadow: 0 0 8px rgba(99, 102, 241, 0.4); }
+    }
+
+    @keyframes spin {
+      0% { transform: rotate(0deg); }
+      100% { transform: rotate(360deg); }
+    }
+  </style>
+</head>
+<body>
+  <!-- Header Card -->
+  <div class="glass-card">
+    <div class="header">
+      <div class="logo-container">
+        <div class="logo-glow"></div>
+        <h1>Zhanla AI Stock Analyst</h1>
+      </div>
+      <div class="version-tag">v1.0.0</div>
+    </div>
+    
+    <!-- Watchlist Manager -->
+    <div class="section-title">My Stock Watchlist</div>
+    <div class="watchlist-input-container">
+      <input type="text" id="watchlist-input" class="watchlist-input" placeholder="Enter symbol (e.g. AAPL)" maxlength="6">
+      <button id="add-btn" class="btn">Add</button>
+    </div>
+    <div id="watchlist-chips" class="watchlist-chips">
+      <!-- Chips added dynamically -->
+    </div>
+  </div>
+
+  <!-- Analysis Container -->
+  <div class="glass-card analysis-container">
+    <div class="section-title">Real-Time News Analysis</div>
+
+    <!-- Empty State -->
+    <div id="empty-state" class="empty-state">
+      <div class="empty-icon">📈</div>
+      <div class="empty-text">No financial news detected on this page, or your stock watchlist is currently empty.</div>
+    </div>
+
+    <!-- Loading State -->
+    <div id="loading-state" class="loading-state">
+      <div class="spinner"></div>
+      <div class="loading-text">Zhanla Agent is analyzing article text...</div>
+    </div>
+
+    <!-- Results State -->
+    <div id="results-content" class="results-content">
+      <div class="market-sentiment-box">
+        <span style="font-size: 13px; font-weight: 500;">Overall Market Mood:</span>
+        <span id="market-sentiment" class="sentiment-badge">Bullish</span>
+      </div>
+
+      <div class="news-summary-box" id="news-summary">
+        <!-- Summary goes here -->
+      </div>
+
+      <div class="section-title" style="font-size: 11px; margin-bottom: 8px;">Watchlist Stock Analysis</div>
+      <div id="stock-impact-list" class="stock-impact-list">
+        <!-- Stock cards go here -->
+      </div>
+    </div>
+  </div>
+
+  <!-- Manual triggers -->
+  <div class="footer">
+    <button id="analyze-page-btn" class="analyze-btn">⚡ Force Scan & Re-analyze Page</button>
+  </div>
+
+  <script src="popup.js"></script>
+</body>
+</html>

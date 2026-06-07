@@ -1,0 +1,7 @@
+[
+  {
+    "newsText": "Apple today announced its next generation of iPhone devices featuring advanced generative AI features integrated directly into iOS. Pre-order demand has reached record-breaking highs, causing several Wall Street firms to raise their price targets for AAPL, citing an upcoming robust supercycle.",
+    "watchlist": ["AAPL", "TSLA"],
+    "expected_output": "{\"relevantStocks\":[{\"symbol\":\"AAPL\",\"impact\":\"Positive\"}],\"overallMarketSentiment\":\"Bullish\"}"
+  }
+]

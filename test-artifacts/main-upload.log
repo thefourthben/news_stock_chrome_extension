@@ -1,0 +1,3 @@
+Loaded env from /Users/benjaminchou/news_stock_chrome_extension/.env
+Component: News Impact Pipeline (TypeScript)
+Using repo login for org 27c9c203-b7f3-4fca-817e-ce36ea446262 from /Users/benjaminchou/news_stock_chrome_extension/.zhanla/credentials.json. Run `zhanla logout` to clear it for this repo.

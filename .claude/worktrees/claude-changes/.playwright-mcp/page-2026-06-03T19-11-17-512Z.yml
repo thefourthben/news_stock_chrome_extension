@@ -1,0 +1,62 @@
+- generic [ref=e2]:
+  - banner [ref=e3]:
+    - link "Z Zhanla" [ref=e4] [cursor=pointer]:
+      - /url: /
+      - generic [ref=e5]: Z
+      - generic [ref=e6]: Zhanla
+    - generic [ref=e7]:
+      - link "Log in" [ref=e8] [cursor=pointer]:
+        - /url: /login
+      - link "Start building" [ref=e9] [cursor=pointer]:
+        - /url: /signup
+  - main [ref=e10]:
+    - generic [ref=e11]:
+      - heading "Turn LLM quality into an operating discipline." [level=1] [ref=e12]
+      - paragraph [ref=e13]: Zhanla gives teams a precision control plane for evaluation, autorater generation, and prompt release governance.
+      - generic [ref=e14]:
+        - link "Launch workspace" [ref=e15] [cursor=pointer]:
+          - /url: /signup
+          - text: Launch workspace
+          - img [ref=e16]
+        - link "Open dashboard" [ref=e18] [cursor=pointer]:
+          - /url: /dashboard
+      - generic [ref=e19]:
+        - generic [ref=e20]:
+          - term [ref=e21]: Velocity
+          - definition [ref=e22]: 10x
+        - generic [ref=e23]:
+          - term [ref=e24]: Stability
+          - definition [ref=e25]: 95%
+        - generic [ref=e26]:
+          - term [ref=e27]: Coverage
+          - definition [ref=e28]: 24/7
+    - generic [ref=e29]:
+      - article [ref=e30]:
+        - img [ref=e32]
+        - heading "Closed-Loop Evaluation" [level=2] [ref=e38]
+        - paragraph [ref=e39]: Run scoring, diagnostics, and prompt updates inside one accountable cycle.
+      - article [ref=e40]:
+        - img [ref=e42]
+        - heading "Operational Signal" [level=2] [ref=e45]
+        - paragraph [ref=e46]: Track run quality, failure modes, and drift with high-frequency telemetry.
+      - article [ref=e47]:
+        - img [ref=e49]
+        - heading "Release Confidence" [level=2] [ref=e52]
+        - paragraph [ref=e53]: Gate production prompts on measurable standards before rollout.
+    - generic [ref=e54]:
+      - generic [ref=e55]:
+        - text: Workflow
+        - heading "Design for measurable improvement, not one-off prompt edits." [level=2] [ref=e56]
+      - generic [ref=e57]:
+        - article [ref=e58]:
+          - generic [ref=e59]: "01"
+          - heading "Define" [level=3] [ref=e60]
+          - paragraph [ref=e61]: Attach datasets, quality rubrics, and pass/fail thresholds.
+        - article [ref=e62]:
+          - generic [ref=e63]: "02"
+          - heading "Generate" [level=3] [ref=e64]
+          - paragraph [ref=e65]: Build autoraters and candidate prompts from your domain context.
+        - article [ref=e66]:
+          - generic [ref=e67]: "03"
+          - heading "Refine" [level=3] [ref=e68]
+          - paragraph [ref=e69]: Promote only versions that exceed baseline quality and stability.

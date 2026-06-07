@@ -1,0 +1,9 @@
+
+# zhanla-sdk-ts
+node_modules
+dist
+package-lock.json
+
+
+.env
+/.zhanla/

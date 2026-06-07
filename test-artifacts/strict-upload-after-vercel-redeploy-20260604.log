@@ -1,0 +1,14 @@
+Loaded env from /Users/benjaminchou/news_stock_chrome_extension/.env
+Component: News Impact Pipeline (TypeScript)
+Remote Evaluation — News Impact Pipeline
+┏━━━━━━━━━━━┳━━━━━━━┳━━━━━━━━━━┳━━━━━━━┓
+┃ Status    ┃ Score ┃ Progress ┃ Error ┃
+┡━━━━━━━━━━━╇━━━━━━━╇━━━━━━━━━━╇━━━━━━━┩
+│ completed │ 0.333 │ 3/3      │       │
+└───────────┴───────┴──────────┴───────┘
+Autorater ID: 424368c5-b942-4d79-ac24-947a40718e5d
+Autorater Run ID: 50fce595-f969-4c51-89a8-59f5b8570d22
+Upload started at: 2026-06-04T21:21:17+00:00
+Upload completed at: 2026-06-04T21:21:36+00:00
+Open: Open run (benchmark-black.vercel.app)
+

@@ -1,0 +1,272 @@
+- generic [ref=e2]:
+  - complementary [ref=e3]:
+    - generic [ref=e4]:
+      - generic [ref=e5]:
+        - link "Z Zhanla" [ref=e6] [cursor=pointer]:
+          - /url: /dashboard
+          - generic [ref=e7]: Z
+          - generic [ref=e8]: Zhanla
+        - button "Collapse sidebar" [ref=e9] [cursor=pointer]:
+          - img [ref=e10]
+      - generic [ref=e12]: DEMO
+      - navigation [ref=e13]:
+        - list [ref=e14]:
+          - listitem [ref=e15]:
+            - link "Dashboard" [ref=e16] [cursor=pointer]:
+              - /url: /dashboard
+              - img [ref=e18]
+              - generic [ref=e23]: Dashboard
+          - listitem [ref=e24]:
+            - link "Datasets" [ref=e25] [cursor=pointer]:
+              - /url: /datasets
+              - img [ref=e27]
+              - generic [ref=e29]: Datasets
+          - listitem [ref=e30]:
+            - link "Autoraters" [ref=e31] [cursor=pointer]:
+              - /url: /evals
+              - img [ref=e33]
+              - generic [ref=e37]: Autoraters
+          - listitem [ref=e38]:
+            - link "zhanla assistant" [ref=e39] [cursor=pointer]:
+              - /url: /chat
+              - img [ref=e41]
+              - generic [ref=e43]: zhanla assistant
+        - paragraph [ref=e45]: Core Components
+        - list [ref=e46]:
+          - listitem [ref=e47]:
+            - link "Agents" [ref=e48] [cursor=pointer]:
+              - /url: /agents
+              - img [ref=e50]
+              - generic [ref=e53]: Agents
+          - listitem [ref=e54]:
+            - link "Orchestrations" [ref=e55] [cursor=pointer]:
+              - /url: /orchestration
+              - img [ref=e57]
+              - generic [ref=e61]: Orchestrations
+          - listitem [ref=e62]:
+            - link "Skills" [ref=e63] [cursor=pointer]:
+              - /url: /skills
+              - img [ref=e65]
+              - generic [ref=e68]: Skills
+          - listitem [ref=e69]:
+            - link "Tools" [ref=e70] [cursor=pointer]:
+              - /url: /tools
+              - img [ref=e72]
+              - generic [ref=e74]: Tools
+        - paragraph [ref=e76]: System
+        - list [ref=e77]:
+          - listitem [ref=e78]:
+            - link "Settings" [ref=e79] [cursor=pointer]:
+              - /url: /settings
+              - img [ref=e81]
+              - generic [ref=e84]: Settings
+  - main [ref=e85]:
+    - generic [ref=e87]:
+      - link "Benchmark" [ref=e88] [cursor=pointer]:
+        - /url: /dashboard
+      - generic [ref=e89]: /
+      - generic [ref=e90]: zhanla assistant
+    - generic [ref=e91]:
+      - generic [ref=e92]:
+        - generic [ref=e93]:
+          - heading "AI Assistant" [level=1] [ref=e94]
+          - paragraph [ref=e95]: Build and manage your evaluation infrastructure through conversation. Your recent assistant sessions appear below.
+        - button "New conversation" [ref=e96]:
+          - img
+          - text: New conversation
+      - table [ref=e98]:
+        - rowgroup [ref=e99]:
+          - row "Title Status Updated Started" [ref=e100]:
+            - columnheader "Title" [ref=e101]
+            - columnheader "Status" [ref=e102]
+            - columnheader "Updated" [ref=e103]
+            - columnheader "Started" [ref=e104]
+            - columnheader [ref=e105]
+        - rowgroup [ref=e106]:
+          - row "New conversation Collecting context 6/3/2026 6/3/2026 Delete" [ref=e107] [cursor=pointer]:
+            - cell "New conversation" [ref=e108]:
+              - generic [ref=e109]: New conversation
+            - cell "Collecting context" [ref=e110]:
+              - generic [ref=e111]: Collecting context
+            - cell "6/3/2026" [ref=e113]
+            - cell "6/3/2026" [ref=e114]
+            - cell "Delete" [ref=e115]:
+              - button "Delete" [ref=e116]:
+                - img
+                - generic [ref=e117]: Delete
+          - row "New conversation Collecting context 6/3/2026 6/3/2026 Delete" [ref=e118] [cursor=pointer]:
+            - cell "New conversation" [ref=e119]:
+              - generic [ref=e120]: New conversation
+            - cell "Collecting context" [ref=e121]:
+              - generic [ref=e122]: Collecting context
+            - cell "6/3/2026" [ref=e124]
+            - cell "6/3/2026" [ref=e125]
+            - cell "Delete" [ref=e126]:
+              - button "Delete" [ref=e127]:
+                - img
+                - generic [ref=e128]: Delete
+          - row "New conversation Collecting context 6/2/2026 6/2/2026 Delete" [ref=e129] [cursor=pointer]:
+            - cell "New conversation" [ref=e130]:
+              - generic [ref=e131]: New conversation
+            - cell "Collecting context" [ref=e132]:
+              - generic [ref=e133]: Collecting context
+            - cell "6/2/2026" [ref=e135]
+            - cell "6/2/2026" [ref=e136]
+            - cell "Delete" [ref=e137]:
+              - button "Delete" [ref=e138]:
+                - img
+                - generic [ref=e139]: Delete
+          - row "New conversation Collecting context 6/2/2026 6/2/2026 Delete" [ref=e140] [cursor=pointer]:
+            - cell "New conversation" [ref=e141]:
+              - generic [ref=e142]: New conversation
+            - cell "Collecting context" [ref=e143]:
+              - generic [ref=e144]: Collecting context
+            - cell "6/2/2026" [ref=e146]
+            - cell "6/2/2026" [ref=e147]
+            - cell "Delete" [ref=e148]:
+              - button "Delete" [ref=e149]:
+                - img
+                - generic [ref=e150]: Delete
+          - row "New conversation Collecting context 6/2/2026 6/2/2026 Delete" [ref=e151] [cursor=pointer]:
+            - cell "New conversation" [ref=e152]:
+              - generic [ref=e153]: New conversation
+            - cell "Collecting context" [ref=e154]:
+              - generic [ref=e155]: Collecting context
+            - cell "6/2/2026" [ref=e157]
+            - cell "6/2/2026" [ref=e158]
+            - cell "Delete" [ref=e159]:
+              - button "Delete" [ref=e160]:
+                - img
+                - generic [ref=e161]: Delete
+          - row "New conversation Collecting context 6/2/2026 6/2/2026 Delete" [ref=e162] [cursor=pointer]:
+            - cell "New conversation" [ref=e163]:
+              - generic [ref=e164]: New conversation
+            - cell "Collecting context" [ref=e165]:
+              - generic [ref=e166]: Collecting context
+            - cell "6/2/2026" [ref=e168]
+            - cell "6/2/2026" [ref=e169]
+            - cell "Delete" [ref=e170]:
+              - button "Delete" [ref=e171]:
+                - img
+                - generic [ref=e172]: Delete
+          - row "New conversation Collecting context 6/2/2026 6/2/2026 Delete" [ref=e173] [cursor=pointer]:
+            - cell "New conversation" [ref=e174]:
+              - generic [ref=e175]: New conversation
+            - cell "Collecting context" [ref=e176]:
+              - generic [ref=e177]: Collecting context
+            - cell "6/2/2026" [ref=e179]
+            - cell "6/2/2026" [ref=e180]
+            - cell "Delete" [ref=e181]:
+              - button "Delete" [ref=e182]:
+                - img
+                - generic [ref=e183]: Delete
+          - row "New conversation Collecting context 6/2/2026 6/2/2026 Delete" [ref=e184] [cursor=pointer]:
+            - cell "New conversation" [ref=e185]:
+              - generic [ref=e186]: New conversation
+            - cell "Collecting context" [ref=e187]:
+              - generic [ref=e188]: Collecting context
+            - cell "6/2/2026" [ref=e190]
+            - cell "6/2/2026" [ref=e191]
+            - cell "Delete" [ref=e192]:
+              - button "Delete" [ref=e193]:
+                - img
+                - generic [ref=e194]: Delete
+          - row "New conversation Collecting context 6/2/2026 6/2/2026 Delete" [ref=e195] [cursor=pointer]:
+            - cell "New conversation" [ref=e196]:
+              - generic [ref=e197]: New conversation
+            - cell "Collecting context" [ref=e198]:
+              - generic [ref=e199]: Collecting context
+            - cell "6/2/2026" [ref=e201]
+            - cell "6/2/2026" [ref=e202]
+            - cell "Delete" [ref=e203]:
+              - button "Delete" [ref=e204]:
+                - img
+                - generic [ref=e205]: Delete
+          - row "New conversation Collecting context 6/2/2026 6/2/2026 Delete" [ref=e206] [cursor=pointer]:
+            - cell "New conversation" [ref=e207]:
+              - generic [ref=e208]: New conversation
+            - cell "Collecting context" [ref=e209]:
+              - generic [ref=e210]: Collecting context
+            - cell "6/2/2026" [ref=e212]
+            - cell "6/2/2026" [ref=e213]
+            - cell "Delete" [ref=e214]:
+              - button "Delete" [ref=e215]:
+                - img
+                - generic [ref=e216]: Delete
+          - row "New conversation Collecting context 6/2/2026 6/2/2026 Delete" [ref=e217] [cursor=pointer]:
+            - cell "New conversation" [ref=e218]:
+              - generic [ref=e219]: New conversation
+            - cell "Collecting context" [ref=e220]:
+              - generic [ref=e221]: Collecting context
+            - cell "6/2/2026" [ref=e223]
+            - cell "6/2/2026" [ref=e224]
+            - cell "Delete" [ref=e225]:
+              - button "Delete" [ref=e226]:
+                - img
+                - generic [ref=e227]: Delete
+          - row "New conversation Collecting context 6/1/2026 6/1/2026 Delete" [ref=e228] [cursor=pointer]:
+            - cell "New conversation" [ref=e229]:
+              - generic [ref=e230]: New conversation
+            - cell "Collecting context" [ref=e231]:
+              - generic [ref=e232]: Collecting context
+            - cell "6/1/2026" [ref=e234]
+            - cell "6/1/2026" [ref=e235]
+            - cell "Delete" [ref=e236]:
+              - button "Delete" [ref=e237]:
+                - img
+                - generic [ref=e238]: Delete
+          - row "New conversation Collecting context 6/1/2026 6/1/2026 Delete" [ref=e239] [cursor=pointer]:
+            - cell "New conversation" [ref=e240]:
+              - generic [ref=e241]: New conversation
+            - cell "Collecting context" [ref=e242]:
+              - generic [ref=e243]: Collecting context
+            - cell "6/1/2026" [ref=e245]
+            - cell "6/1/2026" [ref=e246]
+            - cell "Delete" [ref=e247]:
+              - button "Delete" [ref=e248]:
+                - img
+                - generic [ref=e249]: Delete
+          - row "New conversation Collecting context 6/1/2026 6/1/2026 Delete" [ref=e250] [cursor=pointer]:
+            - cell "New conversation" [ref=e251]:
+              - generic [ref=e252]: New conversation
+            - cell "Collecting context" [ref=e253]:
+              - generic [ref=e254]: Collecting context
+            - cell "6/1/2026" [ref=e256]
+            - cell "6/1/2026" [ref=e257]
+            - cell "Delete" [ref=e258]:
+              - button "Delete" [ref=e259]:
+                - img
+                - generic [ref=e260]: Delete
+          - row "New conversation Collecting context 6/1/2026 6/1/2026 Delete" [ref=e261] [cursor=pointer]:
+            - cell "New conversation" [ref=e262]:
+              - generic [ref=e263]: New conversation
+            - cell "Collecting context" [ref=e264]:
+              - generic [ref=e265]: Collecting context
+            - cell "6/1/2026" [ref=e267]
+            - cell "6/1/2026" [ref=e268]
+            - cell "Delete" [ref=e269]:
+              - button "Delete" [ref=e270]:
+                - img
+                - generic [ref=e271]: Delete
+          - row "New conversation Collecting context 6/1/2026 6/1/2026 Delete" [ref=e272] [cursor=pointer]:
+            - cell "New conversation" [ref=e273]:
+              - generic [ref=e274]: New conversation
+            - cell "Collecting context" [ref=e275]:
+              - generic [ref=e276]: Collecting context
+            - cell "6/1/2026" [ref=e278]
+            - cell "6/1/2026" [ref=e279]
+            - cell "Delete" [ref=e280]:
+              - button "Delete" [ref=e281]:
+                - img
+                - generic [ref=e282]: Delete
+          - row "New conversation Collecting context 6/1/2026 6/1/2026 Delete" [ref=e283] [cursor=pointer]:
+            - cell "New conversation" [ref=e284]:
+              - generic [ref=e285]: New conversation
+            - cell "Collecting context" [ref=e286]:
+              - generic [ref=e287]: Collecting context
+            - cell "6/1/2026" [ref=e289]
+            - cell "6/1/2026" [ref=e290]
+            - cell "Delete" [ref=e291]:
+              - button "Delete" [ref=e292]:
+                - img
+                - generic [ref=e293]: Delete

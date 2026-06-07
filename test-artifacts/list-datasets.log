@@ -1,0 +1,9 @@
+Loaded env from /Users/benjaminchou/news_stock_chrome_extension/.env
+Using repo login for org 27c9c203-b7f3-4fca-817e-ce36ea446262 from /Users/benjaminchou/news_stock_chrome_extension/.zhanla/credentials.json. Run `zhanla logout` to clear it for this repo.
+                                Datasets                                 
+┏━━━━━━━━━┳━━━━━━━━━┳━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┳━━━━━━━━━━━━┓
+┃ Key     ┃ Name    ┃ ID                                   ┃ Created    ┃
+┡━━━━━━━━━╇━━━━━━━━━╇━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━╇━━━━━━━━━━━━┩
+│ dataset │ dataset │ 9d276bf6-adba-4458-b58e-555f41b4f4d9 │ 2026-05-27 │
+└─────────┴─────────┴──────────────────────────────────────┴────────────┘
+Use --web-dataset <KEY> in `zhanla run`

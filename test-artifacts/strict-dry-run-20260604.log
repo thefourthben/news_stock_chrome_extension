@@ -1,0 +1,14 @@
+Loaded env from /Users/benjaminchou/news_stock_chrome_extension/.env
+Component: News Impact Pipeline (TypeScript)
+Running News Impact Pipeline ━━━━━━━━━━━━━━━━━━━━━ 100% Local component run done
+     Scores — News Impact Pipeline      
+┏━━━┳━━━━━━━┳━━━━━━━━━━━┳━━━━━━━━━━━━━━┓
+┃ # ┃ Score ┃ Eval Run  ┃ Summary      ┃
+┡━━━╇━━━━━━━╇━━━━━━━━━━━╇━━━━━━━━━━━━━━┩
+│ 1 │ 0.667 │ completed │ 2/3 = 0.6667 │
+│ 2 │ 0.000 │ completed │ 0/1 = 0.0000 │
+│ 3 │ 0.000 │ completed │ 0/1 = 0.0000 │
+└───┴───────┴───────────┴──────────────┘
+
+Mean score: 0.222  (3 items scored)
+Dry run — nothing uploaded

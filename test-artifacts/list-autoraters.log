@@ -1,0 +1,12 @@
+Loaded env from /Users/benjaminchou/news_stock_chrome_extension/.env
+Using repo login for org 27c9c203-b7f3-4fca-817e-ce36ea446262 from /Users/benjaminchou/news_stock_chrome_extension/.zhanla/credentials.json. Run `zhanla logout` to clear it for this repo.
+                                   Autoraters                                   
+┏━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┳┳━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┳┳┳┓
+┃ Key                                    ┃┃ ID                              ┃┃┃┃
+┡━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━╇╇━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━╇╇╇┩
+│ stock-impact-agent-impact-direction-a… ││ 47defa46-d3e6-42d0-a471-de8465… ││││
+│ diminishing-returns-eval               ││ 424368c5-b942-4d79-ac24-947a40… ││││
+│ strict-market-eval                     ││ 934221a0-9d58-4984-9d58-71d405… ││││
+│ stock-impact-pipeline-eval             ││ 17e3d25e-0fdc-4166-a19d-4c1458… ││││
+└────────────────────────────────────────┴┴─────────────────────────────────┴┴┴┘
+Use --web-eval <KEY> in `zhanla run`

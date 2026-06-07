@@ -1,0 +1,29 @@
+{
+  "manifest_version": 3,
+  "name": "Zhanla Stock News Analyst",
+  "version": "1.0.0",
+  "description": "Analyzes how news articles on your active tab will affect your watchlisted stocks using Zhanla AI Agents.",
+  "permissions": [
+    "storage",
+    "activeTab"
+  ],
+  "action": {
+    "default_popup": "popup.html",
+    "default_title": "Zhanla Stock Analyst"
+  },
+  "background": {
+    "service_worker": "background.js"
+  },
+  "content_scripts": [
+    {
+      "matches": [
+        "http://*/*",
+        "https://*/*"
+      ],
+      "js": [
+        "content.js"
+      ],
+      "run_at": "document_end"
+    }
+  ]
+}
